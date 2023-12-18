@@ -14,7 +14,6 @@
   }
 }
 .navigation__logo {
-  color: #32292f;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -48,7 +47,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  /* Change color on hover for dropdown items */
 }
 .navigation__btns .dropdown .dropdown-content {
   display: none;
@@ -72,12 +70,12 @@
   display: flex;
   justify-content: center;
 }
-.navigation__btns .dropdown .dropdown-content a:hover {
-  background-color: #ffffff;
-}
 .navigation__btns li {
   display: flex;
   align-items: center;
+}
+.navigation__btns li a {
+  text-decoration: none;
 }
 .navigation__btns li a:hover {
   text-decoration: underline;
@@ -128,8 +126,7 @@ main {
 .products .backgroundRect {
   position: absolute;
   background-color: #f6f4f5;
-  min-height: 800px;
-  max-height: 800px;
+  height: 800px;
   width: 60vw;
   left: -80px;
   bottom: -120px;
@@ -137,8 +134,8 @@ main {
 }
 @media (max-width: 960px) {
   .products .backgroundRect {
-    margin-top: 20vh;
     width: 100vw;
+    height: 600px;
     left: 0px;
     bottom: 0px;
   }
@@ -154,13 +151,11 @@ main {
 }
 @media (max-width: 960px) {
   .products__text {
-    display: flex;
     width: 100%;
     padding: 0px 20px 0px 20px;
   }
 }
 .products__text h1 {
-  color: #32292f;
   font-size: 48px;
   font-weight: 200;
   line-height: 56px;
@@ -168,7 +163,6 @@ main {
   margin-bottom: 16px;
 }
 .products__text p {
-  color: #32292f;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -212,7 +206,6 @@ main {
 }
 @media (max-width: 960px) {
   .products__carousel__pictures {
-    height: 400px;
     width: calc(100% - 20px);
   }
 }
@@ -299,14 +292,6 @@ main {
   font-weight: 200;
   line-height: 48px;
 }
-@media (max-width: 960px) {
-  .productsList h1 {
-    text-align: center;
-    font-size: 40px;
-    font-weight: 200;
-    line-height: 48px;
-  }
-}
 .productsList__products {
   margin-top: 55px;
   display: flex;
@@ -339,9 +324,6 @@ main {
 }
 @media (max-width: 960px) {
   .productsList__products .product__text {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
     padding: 0px;
     padding-top: 32px;
     width: 100%;
@@ -430,7 +412,6 @@ main {
   }
 }
 .gallery__container__card {
-  box-sizing: border-box;
   width: 100%;
 }
 .gallery__container__card:nth-child(1) {
@@ -604,7 +585,6 @@ hr {
 }
 .footer__privacy__text {
   text-decoration: none;
-  color: #32292f;
   font-size: 12px;
   font-weight: 300;
   line-height: 20px;
@@ -641,7 +621,7 @@ hr {
   color: #32292f;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  text-decoration: none;
+  font-family: Inter;
 }
 
 body {

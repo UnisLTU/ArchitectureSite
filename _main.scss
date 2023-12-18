@@ -29,16 +29,16 @@ main {
   .backgroundRect {
     position: absolute;
     background-color: $CoffeeBlack5;
-    min-height: 800px;
-    max-height: 800px;
+
+    height: 800px;
     width: 60vw;
     left: -80px;
     bottom: -120px;
     z-index: -1;
 
     @media (max-width: $layout-breakpoint-small) {
-      margin-top: 20vh;
       width: 100vw;
+      height: 600px;
       left: 0px;
       bottom: 0px;
     }
@@ -54,13 +54,11 @@ main {
     margin-right: 111px;
 
     @media (max-width: $layout-breakpoint-small) {
-      display: flex;
       width: 100%;
       padding: 0px 20px 0px 20px;
     }
 
     h1 {
-      color: $CoffeeBlack100;
       font-size: 48px;
       font-weight: 200;
       line-height: 56px;
@@ -69,7 +67,6 @@ main {
     }
 
     p {
-      color: $CoffeeBlack100;
       font-size: 14px;
       font-weight: 300;
       line-height: 24px;
@@ -112,7 +109,6 @@ main {
       width: 100%;
 
       @media (max-width: $layout-breakpoint-small) {
-        height: 400px;
         width: calc(100% - 20px);
       }
 
@@ -209,13 +205,6 @@ main {
     font-size: 40px;
     font-weight: 200;
     line-height: 48px;
-
-    @media (max-width: $layout-breakpoint-small) {
-      text-align: center;
-      font-size: 40px;
-      font-weight: 200;
-      line-height: 48px;
-    }
   }
 
   &__products {
@@ -248,9 +237,6 @@ main {
         padding: 0px 133px;
 
         @media (max-width: $layout-breakpoint-small) {
-          display: flex;
-          flex-direction: column;
-          row-gap: 16px;
           padding: 0px;
           padding-top: 32px;
           width: 100%;
@@ -343,7 +329,6 @@ main {
     }
 
     &__card {
-      box-sizing: border-box;
       width: 100%;
 
       &:nth-child(1) {

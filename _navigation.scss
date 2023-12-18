@@ -22,7 +22,6 @@ $layout-breakpoint-small: 960px;
   }
 
   &__logo {
-    color: $CoffeeBlack100;
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
@@ -84,16 +83,15 @@ $layout-breakpoint-small: 960px;
         display: flex;
         justify-content: center;
       }
-
-      /* Change color on hover for dropdown items */
-      .dropdown-content a:hover {
-        background-color: $White;
-      }
     }
 
     li {
       display: flex;
       align-items: center;
+
+      a {
+        text-decoration: none;
+      }
 
       a:hover {
         text-decoration: underline;
@@ -112,6 +110,7 @@ $layout-breakpoint-small: 960px;
 
   .hamburger {
     display: none;
+
     @media (max-width: $layout-breakpoint-small) {
       display: block;
     }
