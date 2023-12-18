@@ -1,0 +1,128 @@
+// main colors
+$CoffeeBlack100: #32292f;
+$CoffeeBlack20: #d6d4d5;
+$CoffeeBlack5: #f6f4f5;
+$White: #ffffff;
+
+// media breakpoint
+$layout-breakpoint-small: 960px;
+
+.navigation {
+  background-color: $White;
+  position: sticky;
+  top: 0;
+  padding: 22px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+
+  &__logo {
+    color: $CoffeeBlack100;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    align-items: center;
+
+    .dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $White;
+        min-width: 160px;
+        z-index: 1;
+        left: -30px;
+        top: 19px;
+      }
+
+      &:hover {
+        .dropdown-content {
+          display: block;
+
+          div {
+            opacity: 0%;
+          }
+        }
+      }
+
+      .dropdown-content a {
+        color: $CoffeeBlack100;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Change color on hover for dropdown items */
+      .dropdown-content a:hover {
+        background-color: $White;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+
+      input {
+        border: none;
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .navigation {
+    padding: 22px 24px;
+
+    .navigation__btns {
+      background-color: $White;
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      row-gap: 20px;
+      right: 0px;
+      top: 45px;
+
+      .search {
+        padding: 0px 10px;
+        padding-bottom: 10px;
+        order: 4;
+      }
+    }
+
+    #hamburger:checked + &__btns {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
