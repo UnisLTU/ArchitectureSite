@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Architecture site</title>
+    <link rel="shortcut icon" type="ico" href="./assets/favicon.ico" />
+    <!-- Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Import End-->
+    <!-- CSS Reset -->
+    <link
+      href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css "
+      rel="stylesheet"
+    />
+    <!-- CSS Reset End -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <h1 class="navigation__logo">Company logo</h1>
+      <label for="hamburger"
+        ><img
+          class="navigation__hamburger"
+          src="./assets/ri_menu-3-fill.svg"
+          alt="hamburger"
+      /></label>
+      <input type="checkbox" id="hamburger" />
+
+      <ul class="navigation__btns">
+        <!-- Search -->
+        <li class="navigation__btns__search">
+          <input type="text" />
+          <img src="./assets/Search_icon.svg" alt="search" />
+        </li>
+
+        <!-- Products -->
+        <li class="navigation__btns__dropdown">
+          <a href="#products">Products</a>
+          <img src="./assets/Main_Menu_arrow.svg" alt="" />
+          <ul class="navigation__btns__dropdown__content">
+            <div></div>
+            <li><a href="/">Lorem ipsum</a></li>
+            <li><a href="/">Lorem ipsum</a></li>
+            <li><a href="/">Lorem ipsum</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#productsList">Services</a></li>
+        <li><a href="#gallery">Ideas</a></li>
+        <li><a href="#footer">Contacts</a></li>
+      </ul>
+    </nav>
+    <!-- Navigation End -->
+    <!-- Main -->
+    <!-- Products -->
+    <main>
+      <div class="products" id="products">
+        <div class="products__backgroundRect"></div>
+        <div class="products__text">
+          <h1>Lorem ipsum dolor sit amet</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat
+            condimentum pretium eget magna tellus. Morbi pellentesque iaculis
+            vehicula vel pulvinar sit fames imperdiet ac.
+          </p>
+          <a href="#">Products</a>
+        </div>
+        <div class="products__carousel">
+          <div class="products__carousel__pictures">
+            <img
+              src="./assets/22a7e832faa3afd853665860f0fa7723.jpg"
+              alt=""
+              class="pic"
+            />
+            <img
+              src="./assets/2bfc8625304c58e5b426d527ad50fc3d.jpg"
+              alt=""
+              class="pic"
+            />
+            <img
+              src="./assets/65ac5d241bd2da6671dda631062b37da.jpg"
+              alt=""
+              class="pic"
+            />
+            <img
+              src="./assets/7623e1dfa18350997af946b83965b4f1.jpg"
+              alt=""
+              class="pic"
+            />
+            <img
+              src="./assets/9578f9e3332421750ab3f9d30f39fbeb.jpg"
+              alt=""
+              class="pic"
+            />
+          </div>
+          <div class="carousel__indicators">
+            <div class="carousel__indicators__line"></div>
+            <div class="carousel__indicators__line"></div>
+            <div class="carousel__indicators__line"></div>
+            <div class="carousel__indicators__line"></div>
+            <div class="carousel__indicators__line"></div>
+            <h2></h2>
+          </div>
+        </div>
+      </div>
+      <!-- Products End -->
+
+      <!-- Product list -->
+      <div class="productsList" id="productsList">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <div class="productsList__products">
+          <div class="productsList__products__product">
+            <div class="productsList__products__product__text">
+              <h1>Lorem ipsum</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat
+                condimentum pretium eget magna tellus.
+              </p>
+              <a href="#">View products</a>
+            </div>
+            <img src="./assets/e919f88f0871a97c186bc988912c79b0.jpg" alt="" />
+          </div>
+          <div class="productsList__products__product">
+            <div class="productsList__products__product__text">
+              <h1>Lorem ipsum dolor</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Erat
+                condimentum pretium eget magna tellus.
+              </p>
+              <a href="#">View products</a>
+            </div>
+            <img src="./assets/2bfc8625304c58e5b426d527ad50fc3d.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- Product List End -->
+      <!-- Gallery???  -->
+      <div class="gallery" id="gallery">
+        <h1 class="gallery__text">Lorem ipsum dolor sit amet</h1>
+        <div class="gallery__background"></div>
+        <div class="gallery__container">
+          <div class="gallery__container__card">
+            <img
+              src="/assets/7623e1dfa18350997af946b83965b4f1.jpg"
+              alt="image1"
+            />
+            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
+          </div>
+          <div class="gallery__container__card">
+            <img
+              src="/assets/65ac5d241bd2da6671dda631062b37da.jpg"
+              alt="image2"
+            />
+            <h1>Lorem ipsum dolor</h1>
+          </div>
+
+          <div class="gallery__container__card">
+            <img
+              src="./assets/9578f9e3332421750ab3f9d30f39fbeb.jpg"
+              alt="image3"
+            />
+            <h1>Lorem ipsum</h1>
+          </div>
+          <div class="gallery__container__card">
+            <img
+              src="./assets/e0b4c16ad73b3bfa4ba88b6f89cbdb65.jpg"
+              alt="image4"
+            />
+            <h1>Lorem ipsum</h1>
+          </div>
+        </div>
+      </div>
+      <!-- Gallery??? Ends -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer -->
+    <hr />
+    <footer class="footer" id="footer">
+      <h1 class="footer__logo">Company logo</h1>
+      <a class="footer__links" href="#products">Interior</a>
+      <a class="footer__links" href="#products">Exterior</a>
+      <a class="footer__links" href="#productsList">Services</a>
+      <a class="footer__links" href="#gallery">Ideas</a>
+      <a class="footer__links" href="#footer">Contacts</a>
+      <div class="footer__privacy">
+        <a class="footer__privacy__text" href="#">Privacy policy</a>
+        <a class="footer__privacy__text" href="#">Cookie policy</a>
+      </div>
+      <div class="footer__address">
+        <h2 class="footer__address__text">Shopping center</h2>
+        <h2 class="footer__address__text">Address Line</h2>
+        <a class="footer__address__text" href="tel:+37000000000"
+          >Tel.: +370 000 00000</a
+        >
+        <a class="footer__address__text" href="mailto:info@shoppingcenter.com">
+          info@shoppingcenter.com
+        </a>
+      </div>
+    </footer>
+    <hr />
+    <div class="copyright">All rights reserved. © 2021 Shopping Center.</div>
+    <!-- Footer End -->
+  </body>
+</html>
