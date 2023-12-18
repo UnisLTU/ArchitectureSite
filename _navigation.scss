@@ -43,7 +43,7 @@ $layout-breakpoint-small: 960px;
       top: 45px;
     }
 
-    .search {
+    &__search {
       @media (max-width: $layout-breakpoint-small) {
         padding: 0px 10px;
         padding-bottom: 10px;
@@ -51,12 +51,12 @@ $layout-breakpoint-small: 960px;
       }
     }
 
-    .dropdown {
+    &__dropdown {
       position: relative;
       display: flex;
       align-items: center;
 
-      .dropdown-content {
+      &__content {
         display: none;
         position: absolute;
         background-color: $White;
@@ -67,7 +67,7 @@ $layout-breakpoint-small: 960px;
       }
 
       &:hover {
-        .dropdown-content {
+        .navigation__btns__dropdown__content {
           display: block;
 
           div {
@@ -76,7 +76,7 @@ $layout-breakpoint-small: 960px;
         }
       }
 
-      .dropdown-content a {
+      &__content a {
         color: $CoffeeBlack100;
         padding: 12px 16px;
         text-decoration: none;
@@ -108,7 +108,7 @@ $layout-breakpoint-small: 960px;
     }
   }
 
-  .hamburger {
+  &__hamburger {
     display: none;
 
     @media (max-width: $layout-breakpoint-small) {
