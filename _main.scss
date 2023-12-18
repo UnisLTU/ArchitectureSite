@@ -9,12 +9,22 @@ $layout-breakpoint-small: 960px;
 
 main {
   padding: 100px 80px 140px 80px;
+
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 0px 0px 0px 0px;
+  }
 }
 
 .products {
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (max-width: $layout-breakpoint-small) {
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: start;
+  }
 
   .backgroundRect {
     position: absolute;
@@ -25,6 +35,13 @@ main {
     left: -80px;
     bottom: -120px;
     z-index: -1;
+
+    @media (max-width: $layout-breakpoint-small) {
+      margin-top: 20vh;
+      width: 100vw;
+      left: 0px;
+      bottom: 0px;
+    }
   }
 
   &__text {
@@ -35,6 +52,12 @@ main {
     height: 400px;
     color: $White;
     margin-right: 111px;
+
+    @media (max-width: $layout-breakpoint-small) {
+      display: flex;
+      width: 100%;
+      padding: 0px 20px 0px 20px;
+    }
 
     h1 {
       color: $CoffeeBlack100;
@@ -61,6 +84,13 @@ main {
       background-color: $CoffeeBlack100;
       padding: 12px 24px;
 
+      @media (max-width: $layout-breakpoint-small) {
+        width: 100%;
+        max-width: 340px;
+        text-align: center;
+        align-self: center;
+      }
+
       &:hover {
         text-decoration: underline;
         text-decoration-thickness: 1.5px;
@@ -71,11 +101,20 @@ main {
     width: 60vw;
     height: 400px;
 
+    @media (max-width: $layout-breakpoint-small) {
+      width: 100%;
+    }
+
     &__pictures {
       position: relative;
       overflow: hidden;
       height: 400px;
       width: 100%;
+
+      @media (max-width: $layout-breakpoint-small) {
+        height: 400px;
+        width: calc(100% - 20px);
+      }
 
       img {
         object-fit: cover;
@@ -86,6 +125,10 @@ main {
         top: 0;
         opacity: 0;
         animation: display 20s infinite;
+
+        @media (max-width: $layout-breakpoint-small) {
+          left: 0;
+        }
       }
 
       img:nth-child(2) {
@@ -109,6 +152,10 @@ main {
       display: flex;
       justify-content: end;
       align-items: baseline;
+
+      @media (max-width: $layout-breakpoint-small) {
+        margin-right: 20px;
+      }
 
       div:nth-child(2) {
         animation-delay: 4s;
@@ -152,12 +199,23 @@ main {
 .productsList {
   margin-top: 200px;
 
+  @media (max-width: $layout-breakpoint-small) {
+    margin: 68px 0px;
+    padding: 0px 24px;
+  }
+
   h1 {
-    color: $CoffeeBlack100;
     text-align: center;
     font-size: 40px;
     font-weight: 200;
     line-height: 48px;
+
+    @media (max-width: $layout-breakpoint-small) {
+      text-align: center;
+      font-size: 40px;
+      font-weight: 200;
+      line-height: 48px;
+    }
   }
 
   &__products {
@@ -166,12 +224,20 @@ main {
     flex-direction: column;
     row-gap: 104px;
 
+    @media (max-width: $layout-breakpoint-small) {
+      row-gap: 72px;
+    }
+
     :nth-child(2) {
       flex-direction: row-reverse;
     }
 
     .product {
       display: flex;
+
+      @media (max-width: $layout-breakpoint-small) {
+        flex-direction: column-reverse;
+      }
 
       &__text {
         display: flex;
@@ -180,6 +246,15 @@ main {
         row-gap: 16px;
         width: 50%;
         padding: 0px 133px;
+
+        @media (max-width: $layout-breakpoint-small) {
+          display: flex;
+          flex-direction: column;
+          row-gap: 16px;
+          padding: 0px;
+          padding-top: 32px;
+          width: 100%;
+        }
 
         h1 {
           font-weight: 300;
@@ -216,6 +291,12 @@ main {
         width: 50%;
         min-height: 500px;
         max-height: 500px;
+
+        @media (max-width: $layout-breakpoint-small) {
+          min-height: 300px;
+          max-height: 300px;
+          width: 100%;
+        }
       }
     }
   }
@@ -225,6 +306,11 @@ main {
   position: relative;
   width: 100%;
   margin-top: 176px;
+
+  @media (max-width: $layout-breakpoint-small) {
+    margin-top: 80px;
+    padding: 20px;
+  }
 
   &__text {
     font-size: 32px;
@@ -241,11 +327,20 @@ main {
     width: 70vw;
     height: 100%;
     background-color: $CoffeeBlack5;
+
+    @media (max-width: $layout-breakpoint-small) {
+      display: block;
+    }
   }
 
   &__container {
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     &__card {
       box-sizing: border-box;
@@ -254,6 +349,10 @@ main {
       &:nth-child(1) {
         margin-right: 24px;
         flex: 0 0 60%;
+
+        @media (max-width: $layout-breakpoint-small) {
+          margin-right: 0;
+        }
       }
 
       &:nth-child(2) {
@@ -263,6 +362,10 @@ main {
       &:nth-child(3) {
         margin-right: 24px;
         flex: 0 0 50%;
+
+        @media (max-width: $layout-breakpoint-small) {
+          margin-right: 0;
+        }
       }
       &:nth-child(4) {
         flex: 0 0 calc(50% - 24px);
@@ -273,149 +376,16 @@ main {
         width: 100%;
         height: 500px;
         display: block;
+
+        @media (max-width: $layout-breakpoint-small) {
+          height: 320px;
+        }
       }
 
       h1 {
         margin: 16px 0px 64px 0px;
         font-size: 18px;
         font-weight: 300;
-      }
-    }
-  }
-}
-
-@media (max-width: $layout-breakpoint-small) {
-  main {
-    padding: 0px 0px 0px 0px;
-  }
-
-  .products {
-    flex-direction: column-reverse;
-    justify-content: start;
-    align-items: start;
-
-    .backgroundRect {
-      margin-top: 20vh;
-      width: 100vw;
-      left: 0px;
-      bottom: 0px;
-    }
-
-    &__text {
-      display: flex;
-      width: 100%;
-      padding: 0px 20px 0px 20px;
-
-      a {
-        width: 100%;
-        max-width: 340px;
-        text-align: center;
-        align-self: center;
-      }
-    }
-
-    &__carousel {
-      width: 100%;
-
-      &__pictures {
-        height: 400px;
-        width: calc(100% - 20px);
-
-        img {
-          left: 0px;
-        }
-      }
-      .carousel__indicators {
-        box-sizing: border-box;
-        margin-right: 20px;
-      }
-    }
-  }
-
-  .productsList {
-    margin: 68px 0px;
-    padding: 0px 24px;
-
-    h1 {
-      color: $CoffeeBlack100;
-      text-align: center;
-      font-size: 40px;
-      font-weight: 200;
-      line-height: 48px;
-    }
-
-    &__products {
-      row-gap: 72px;
-    }
-
-    .product {
-      display: flex;
-      flex-direction: column-reverse;
-
-      &__text {
-        display: flex;
-        flex-direction: column;
-        row-gap: 16px;
-        padding: 0px;
-        padding-top: 32px;
-        width: 100%;
-
-        h1 {
-          font-weight: 300;
-          font-size: 32px;
-          text-align: start;
-          line-height: 40px;
-        }
-
-        p {
-          font-size: 14px;
-          font-weight: 300;
-          line-height: 24px;
-        }
-
-        a {
-          width: 100%;
-          max-width: 340px;
-          text-align: center;
-          align-self: center;
-        }
-      }
-
-      img {
-        max-height: 300px;
-        width: 100%;
-      }
-    }
-  }
-
-  .gallery {
-    margin-top: 80px;
-    padding: 20px;
-
-    &__background {
-      display: block;
-    }
-
-    &__container {
-      flex-direction: column;
-      align-items: center;
-
-      &__card {
-        width: 100%;
-
-        &:nth-child(1) {
-          margin-right: 0px;
-        }
-
-        &:nth-child(3) {
-          margin-right: 0px;
-        }
-
-        img {
-          width: 100%;
-          height: 320px;
-          display: block;
-        }
       }
     }
   }

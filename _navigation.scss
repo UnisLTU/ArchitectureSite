@@ -17,6 +17,10 @@ $layout-breakpoint-small: 960px;
   align-items: center;
   z-index: 2;
 
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 22px 24px;
+  }
+
   &__logo {
     color: $CoffeeBlack100;
     font-size: 16px;
@@ -29,6 +33,24 @@ $layout-breakpoint-small: 960px;
     flex-direction: row;
     column-gap: 48px;
     align-items: center;
+
+    @media (max-width: $layout-breakpoint-small) {
+      background-color: $White;
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      row-gap: 20px;
+      right: 0px;
+      top: 45px;
+    }
+
+    .search {
+      @media (max-width: $layout-breakpoint-small) {
+        padding: 0px 10px;
+        padding-bottom: 10px;
+        order: 4;
+      }
+    }
 
     .dropdown {
       position: relative;
@@ -90,39 +112,15 @@ $layout-breakpoint-small: 960px;
 
   .hamburger {
     display: none;
+    @media (max-width: $layout-breakpoint-small) {
+      display: block;
+    }
   }
 
   #hamburger {
     display: none;
   }
-}
-
-@media (max-width: $layout-breakpoint-small) {
-  .navigation {
-    padding: 22px 24px;
-
-    .navigation__btns {
-      background-color: $White;
-      position: absolute;
-      display: none;
-      flex-direction: column;
-      row-gap: 20px;
-      right: 0px;
-      top: 45px;
-
-      .search {
-        padding: 0px 10px;
-        padding-bottom: 10px;
-        order: 4;
-      }
-    }
-
-    #hamburger:checked + &__btns {
-      display: flex;
-    }
-
-    .hamburger {
-      display: block;
-    }
+  #hamburger:checked + &__btns {
+    display: flex;
   }
 }
